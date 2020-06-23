@@ -1,5 +1,24 @@
 /* Estilo para tablet */
 @media only screen and (min-width: 788px) and (max-width: 979px) {
+
+  /* Qualidade Home */
+  .qualidade::after {
+    right: 66px;
+  }
+
+  .qualidade_lista li {
+    padding: 0 10px;
+  }
+
+  /* Footer */
+  .footer_redes ul li a {
+    padding: 6px;
+  }
+
+  .footer_redes ul li a img {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 /* Estilo para mobile */
@@ -33,10 +52,24 @@
   }
 
   /* Introdução */
+  .introducao h1 {
+    font-size: 36px;
+  }
+
   .introducao {
     margin-top: 0;
-    padding-top: 20px;
-    background: url("../img/bg-mobile.jpg") no-repeat center;
+    padding-top: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-mobile.jpg") no-repeat center;
     background-size: cover;
+  }
+
+  /* Call */
+  .call {
+    padding-top: 10px;
+  }
+
+  /* Qualidade Home */
+  .qualidade::after {
+    display: none;
   }
 }
