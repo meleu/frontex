@@ -146,5 +146,10 @@
     padding-right: 0;
   }
 
+  .contato_form {
+    padding-right: 0px;
+    margin-bottom: 40px;
+  }
+
 }
 /* Final do estilo para mobile */
