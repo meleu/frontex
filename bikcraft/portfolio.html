@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikcraft - Portfólio</title>
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="css/responsivo.css">
-  <title>Bikcraft - Portfólio</title>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
@@ -32,24 +34,39 @@
 
   <section class="introducao-interna interna_portfolio">
     <div class="container">
-      <h1>Portfólio</h1>
-      <p>conheça os projetos que amamos mostrar</p>
+      <h1 data-anime="400" class="fadeInDown">Portfólio</h1>
+      <p data-anime="400" class="fadeInDown">conheça os projetos que amamos mostrar</p>
     </div>
   </section>
 
-  <section class="container">
+  <section class="container fadeInDown" data-slide="quote" data-anime="1200">
     <blockquote class="quote_clientes">
-      <p>"No mundo atual, a contínua expansão de nossa atividade cumpre um papel essencial na formulação da gestão
-        inovadora da qual fazemos parte..."</p>
+      <p>"Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft fez foi intensificar o meu amor por esta
+        atividdade. Recomendo à todos que amo."</p>
       <cite>Barbara Moss</cite>
+    </blockquote>
+    <blockquote class="quote_clientes">
+      <p>"Nada melhor do que dar um rolé com a minha Bikcraft na orla. Essa é a minha companheira mais fiel, nunca me
+        traiu e está sempre a minha disposição."</p>
+      <cite>Jhony Rato</cite>
+    </blockquote>
+    <blockquote class="quote_clientes">
+      <p>"Aqueles que ainda não possuem uma Bikcraft, não sabem o qu estão perdendo. A precisão é absurda e a velocidade
+        transcendental. Nunca vi nada igual."</p>
+      <cite>Bernardo</cite>
     </blockquote>
   </section>
 
   <section class="portfolio">
-    <div class="container">
+    <div class="container" data-slide="portfolio">
       <ul class="portfolio_lista">
         <li class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retro" srcset=""></li>
         <li class="grid-8"><img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio" srcset=""></li>
+        <li class="grid-16"><img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte" srcset=""></li>
+      </ul>
+      <ul class="portfolio_lista">
+        <li class="grid-8"><img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio" srcset=""></li>
+        <li class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retro" srcset=""></li>
         <li class="grid-16"><img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte" srcset=""></li>
       </ul>
     </div>
@@ -103,6 +120,10 @@
     </div>
 
   </footer>
+
+  <script src="./js/simple-anime.js"></script>
+  <script src="./js/simple-slide.js"></script>
+  <script src="./js/script.js"></script>
 
 </body>
 
