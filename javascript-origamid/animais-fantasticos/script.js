@@ -1,23 +1,72 @@
 /* **********************************************************************
  * -- Navegação por tabs na lista de animais.
  * **********************************************************************/
-const tabMenu = document.querySelectorAll('.js-tab-menu li');
-const tabContent = document.querySelectorAll('.js-tab-content section');
+function initTabNavigation() {
+  const tabMenu = document.querySelectorAll('.js-tab-menu li');
+  const tabContent = document.querySelectorAll('.js-tab-content section');
 
-if (tabMenu.length && tabContent.length) {
-  tabContent[0].classList.add('ativo');
+  if (tabMenu.length && tabContent.length) {
+    tabContent[0].classList.add('ativo');
 
-  function activeTab(index) {
-    tabContent.forEach((section) => {
-      section.classList.remove('ativo');
+    function activeTab(index) {
+      tabContent.forEach((section) => {
+        section.classList.remove('ativo');
+      });
+      tabContent[index].classList.add('ativo');
+    }
+
+    tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener('click', () => activeTab(index));
     });
-    tabContent[index].classList.add('ativo');
+  }
+}
+
+initTabNavigation();
+
+
+function initAccordion() {
+  const accordionList = document.querySelectorAll('.js-accordion dt');
+  const activeClass = 'ativo';
+
+  if (accordionList.length) {
+    accordionList[0].classList.add(activeClass);
+    accordionList[0].nextElementSibling.classList.add(activeClass);
+
+    function activeAccordion() {
+      this.classList.toggle(activeClass);
+      this.nextElementSibling.classList.toggle(activeClass);
+    }
+
+    accordionList.forEach((item) => {
+      item.addEventListener('click', activeAccordion);
+    });
+  }
+}
+
+initAccordion();
+
+
+function initSmoothScrolling() {
+  const internLinks = document.querySelectorAll('.js-menu a[href^="#"');
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href'); // pega href exato, não URL completa
+    const section = document.querySelector(href);
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    // // maneira alternativa
+    // const top = section.offsetTop;
+    // window.scrollTo({
+    //   top,
+    //   behavior: 'smooth'
+    // });
   }
 
-  tabMenu.forEach((itemMenu, index) => {
-    itemMenu.addEventListener('click', () => activeTab(index));
-  });
+  internLinks.forEach((link) => link.addEventListener('click', scrollToSection));
 }
-/* **********************************************************************
- * Navegação por tabs na lista de animais. --
- * **********************************************************************/
+
+initSmoothScrolling();
