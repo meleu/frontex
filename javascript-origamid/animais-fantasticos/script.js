@@ -70,3 +70,29 @@ function initSmoothScrolling() {
 }
 
 initSmoothScrolling();
+
+
+function initScrollAnimation() {
+  const sections = document.querySelectorAll('.js-scroll');
+
+  if (sections.length) {
+    const animateHeight = window.innerHeight * 0.6;
+
+    function animateScroll() {
+      sections.forEach((section) => {
+        const isSectionVisible = section.getBoundingClientRect().top - animateHeight < 0;
+        if (isSectionVisible) {
+          section.classList.add('ativo');
+        } else {
+          section.classList.remove('ativo');
+        }
+      });
+    }
+
+    animateScroll();
+
+    window.addEventListener('scroll', animateScroll);
+  }
+}
+
+initScrollAnimation();
