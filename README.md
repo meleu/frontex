@@ -1,9 +1,7 @@
-# frontend exercises
-
-Dumping what I've been doing to practice frontend stuff.
+## Dumping what I've been doing to practice frontend stuff
 
 
-## Dad Jokes
+### Dad Jokes
 
 <https://meleu.github.io/frontex/dadjoke/>
 
@@ -12,7 +10,7 @@ Dad Joke Generator (powered by <https://icanhazdadjoke.com>).
 I've made this to practice fetching data from an API.
 
 
-## Bikcraft
+### Bikcraft
 
 <https://meleu.github.io/frontex/bikcraft/>
 
